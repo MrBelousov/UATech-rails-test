@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
 
   # 5 users per one page (index action)
   self.per_page = 5
+
+  has_many :microposts
 end

@@ -13,4 +13,16 @@
       <%= link_to 'Edit profile', edit_user_path %>
     <% end %>
   </div>
+
+  <div class="col-sm-6">
+  <% if @user == current_user %>
+    <%= render 'microposts/micropost_form' %>
+  <% end %>
+
+  <% if @user.microposts.any? %>
+        <div id="microposts-list">
+        <%= render partial: 'microposts/microposts', locals: { user: @user } %>
+        </div>
+  <% end %>
+  </div>
 </div>

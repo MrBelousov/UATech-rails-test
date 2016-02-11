@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Resources
   resources :users
+  resources :microposts
 
   # Root path
   root to: 'home#index'

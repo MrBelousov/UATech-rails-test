@@ -1,0 +1,7 @@
+<%= form_for(new_micropost) do |f| %>
+  <%= render 'layouts/shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :micropost_text, placeholder: "Compose new micropost...", required: true %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary", remote: true %>
+<% end %>

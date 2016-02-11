@@ -16,13 +16,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "users";
+@import "microposts";
 
 html {
   position: relative;
   min-height: 100%;
 }
 
-body{margin-bottom: 150px}
+body{
+  margin-bottom: 150px;
+}
+
+.alert{
+  margin-top: 15px !important;
+}
 
 .float-left{
   float: left;
