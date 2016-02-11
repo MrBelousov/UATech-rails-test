@@ -1,0 +1,12 @@
+== README
+
+Rails test app
+
+Used technologies:
+
+* Ruby 2.2.1
+
+* Rails 4.2.5
+
+* Twitter Bootstrap 3
+
