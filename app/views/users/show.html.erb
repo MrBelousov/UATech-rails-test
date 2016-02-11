@@ -1,0 +1,16 @@
+<div class="container user-show">
+  <div class="user-avatar col-sm-3">
+  <% if @user.avatar.present? %>
+    <%= image_tag @user.avatar, alt: 'user avatar', class: 'img-responsive user-avatar' %>
+  <% else %>
+    <%= image_tag 'no_profile_img.gif', alt: 'no profile image', class: 'img-responsive user-avatar' %>
+  <% end %>
+  </div>
+  <div class="user-info col-sm-3">
+    <p>First name: <%= @user.first_name %></p>
+    <p>Last name: <%= @user.last_name %></p>
+    <% if user_signed_in? && @user == current_user %>
+      <%= link_to 'Edit profile', edit_user_path %>
+    <% end %>
+  </div>
+</div>

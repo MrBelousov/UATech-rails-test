@@ -1,0 +1,21 @@
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <div class="user">
+        <div class="float-left">
+          <% if user.avatar.present? %>
+            <%= link_to (image_tag user.avatar, alt: 'User avatar', class: 'img-responsive'),
+                      user_path(user) %>
+          <% else %>
+            <%= link_to (image_tag 'no_profile_img.gif', alt: 'No profile image', class: 'img-responsive'),
+                        user_path(user) %>
+          <% end %>
+        </div>
+        <div class="user-params col-sm-4">
+          <%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  <%= will_paginate @users %>
+</ul>

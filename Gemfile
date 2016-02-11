@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'carrierwave'
+gem 'will_paginate', '~> 3.0.6'
 
 # Admin panel
 gem 'activeadmin', github: 'activeadmin'

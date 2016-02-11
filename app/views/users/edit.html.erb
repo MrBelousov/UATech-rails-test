@@ -1,0 +1,34 @@
+<div class="col-sm-6">
+  <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> do not allow to update profile:</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+  <div class="panel panel-default body-rev">
+    <div class="panel-body add-form">
+      <%= form_for(@user) do |f| %>
+          <div class="form-group">
+            <%= f.label :first_name, 'First name:' %><br>
+            <%= f.text_field :first_name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :last_name, 'Last name:' %><br>
+            <%= f.text_field :last_name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :avatar, 'Your profile picture:' %><br>
+            <%= f.file_field :avatar %>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit 'Update!', class: 'btn btn-primary' %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

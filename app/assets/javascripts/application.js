@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+if ($(document).height() <= $(window).height())
+    $("footer.footer").addClass("navbar-fixed-bottom");
