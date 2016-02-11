@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, UserAvatarUploader
 
-  # 5 users per one page (index action)
-  self.per_page = 5
+  # 5 Users per one page (index action)
+  paginates_per 5
 
   has_many :microposts
 
@@ -17,9 +17,6 @@ class User < ActiveRecord::Base
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      user.first_name = auth.info.first_name
-      user.last_name = auth.info.last_name
-      user.avatar = auth.info.image
     end
   end
 

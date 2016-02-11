@@ -1,0 +1,26 @@
+<% if user.microposts.present? %>
+    <table id="admin-services" class="table table-striped company-list">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>Micropost text</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% user.microposts.order(id: 'desc').each do |micropost| %>
+          <tr>
+            <td class="col-sm-2"><%= micropost.id %></td>
+            <td class="col-sm-4"><%= micropost.micropost_text %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    <div class="panel-body">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          This user has not published any posts.
+        </div>
+      </div>
+    </div>
+<% end %>

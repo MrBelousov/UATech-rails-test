@@ -20,9 +20,9 @@
   <% end %>
 
   <% if @user.microposts.any? %>
-        <div id="microposts-list">
-        <%= render partial: 'microposts/microposts', locals: { user: @user } %>
-        </div>
+    <div id="microposts-list">
+      <%= render partial: 'microposts/microposts', locals: { user: @user } %>
+    </div>
   <% end %>
   </div>
 </div>

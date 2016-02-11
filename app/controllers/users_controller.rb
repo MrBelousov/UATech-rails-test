@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.all.order(id: 'desc').page params[:page]
   end
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page]).order(id: 'desc')
+    @microposts = @user.microposts.order(id: 'desc').page params[:page]
   end
 
   def edit
