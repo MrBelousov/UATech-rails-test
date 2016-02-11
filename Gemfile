@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'carrierwave'
 gem 'kaminari'
+gem 'rails_12factor', group: :production
 
 # Admin panel
 gem 'activeadmin', github: 'activeadmin'
