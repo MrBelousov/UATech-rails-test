@@ -20,6 +20,8 @@ gem 'activeadmin', github: 'activeadmin'
 # Authorization
 gem 'devise', '~> 3.5'
 gem 'bcrypt', '~> 3.1.7'
+# Authorization through facebook
+gem 'omniauth-facebook'
 
 # WebServer
 gem 'passenger', '~> 5.0'
