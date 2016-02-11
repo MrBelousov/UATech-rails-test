@@ -1,0 +1,19 @@
+<h3>Microposts feed</h3>
+<ol class="microposts">
+  <% @microposts.each do |micropost| %>
+      <li class="micropost">
+        <%= micropost.user.first_name %>
+        <%= micropost.user.last_name %><br><br>
+        <span class="content"><%= micropost.micropost_text %></span><br><br>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    </span>
+        <% if current_user == micropost.user %>
+            <%= link_to "delete", micropost, method: :delete,
+                        data: { confirm: "You sure?" },
+                        title: micropost.micropost_text %>
+        <% end %>
+      </li>
+  <% end %>
+</ol>
+<%= paginate @microposts %>

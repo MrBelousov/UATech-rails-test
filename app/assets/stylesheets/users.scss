@@ -6,6 +6,7 @@
   height: 200px;
   width: auto;
   float: left;
+  max-width: 200px;
 }
 
 .user-show{
@@ -15,6 +16,7 @@
 .user-info{
   display: inline-block;
   text-align: left;
+  margin-left: 20px;
 }
 
 .users{
