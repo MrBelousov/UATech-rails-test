@@ -10,6 +10,46 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #eee;
+  text-align: center;
+}
+
+.header{
+  background: #eee;
+  padding: 10px;
+  min-height: 60px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.logo{
+  padding: 10px;
+  float: left;
+  a{
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
+    color: #2E2F30;
+    font-size: 22px;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  a:active{
+    text-decoration: none;
+  }
+}
+
+.menu{
+  padding: 10px;
+  float: right;
+}
